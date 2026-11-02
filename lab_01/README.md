@@ -75,3 +75,7 @@ Then continue with Step 2 of the [diffdrive_bot README](diffdrive_bot/README.md)
 ## License
 
 The packages are released under the MIT license; see [LICENSE](../LICENSE).
+
+## Reflection
+
+Making the robot turn precisely 90 degrees was the most challenging aspect of this lab. Subtracting the start angle produced incorrect results because the odometry angle jumps from 180 to -180 when the robot turns past its back. I added the tiny angle adjustments in between each update to address this. The node became caught in the loop and was unable to read odometry data, which caused the robot to freeze while rotating. This was resolved with a multi-threaded executor. Additionally, until I granted it display access, Gazebo would not open from my Linux container. Because odometry drifts, I would include the IMU the next time.

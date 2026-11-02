@@ -1,0 +1,5 @@
+float32 angle     # goal: rad, positive turns left
+---
+float32 turned    # result: rad actually turned
+---
+float32 turned    # feedback: rad turned so far

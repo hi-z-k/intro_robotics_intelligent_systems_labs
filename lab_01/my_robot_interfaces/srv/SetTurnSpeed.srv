@@ -1,0 +1,4 @@
+float32 turn_speed   # rad/s, must be > 0 and <= max_turn_speed
+---
+bool success
+string message
